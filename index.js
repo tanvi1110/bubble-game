@@ -44,15 +44,18 @@ document.querySelector("#bottom").addEventListener("click", function (dets) {
         hitval();
     }
     else {
-        if(score > 0) {
 
+        if (score > 0) {
             score -= 10;
             document.querySelector("#scoreval").textContent = score;
-        } 
-        else
-        {
+            bubble();
+            hitval();
+        }
+        else {
             score = 0;
             document.querySelector("#scoreval").textContent = score;
+            bubble();
+            hitval();
         }
     }
 
